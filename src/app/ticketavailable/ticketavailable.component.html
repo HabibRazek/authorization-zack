@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="card shadow mb-4">
+    <div class="card-body">
+       <!--  <form class="form-inline">
+            <div class="form-group mx-sm-3 mb-2 mt-2 ">
+            <label>Type your destination to find your ticket </label>
+            <input class="form-control" #searchTerm (keyup)="onKeyUp(searchTerm.value)">
+             </div>
+            </form> -->
+ 
+    <table class="table table-striped">
+    <tr> <th>Id</th><th> Code</th> <th>Type</th> <th>Amount</th><th>number</th><th>destination flight</th>  </tr>
+    <tbody *ngFor="let ticket of tickets">
+            <tr *ngIf="ticket.flight.destinationFlight==fly.destinationFlight && ticket.nbrTicket>0">
+            <td>{{ticket.idTicket}}</td>
+            <td>{{ticket.codeTicket}}</td>
+            <td>{{ticket.typeTicket}}</td>
+            <td>{{ticket.amountTicket}}</td>
+            <td>{{ticket.nbrTicket}}</td>
+            <td>{{ticket.flight.destinationFlight}}</td>
+            
+            <td><a class="btn btn-success" (click)="modif(ticket.idTicket)">Book</a></td>
+            <td><a class="btn btn-danger" >Delete</a></td>
+        </tr>
+    </tbody> 
+    </table>
+    </div>
+    </div>
+</div>
+         

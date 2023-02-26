@@ -1,0 +1,22 @@
+<div class="container">
+    <div>
+    <h2>fill this form to create your account</h2>
+    </div>
+    <form >
+        <div *ngIf="errorMessage">
+            {{ errorMessage }}
+          </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >firstnamePassenger</label>
+        <input type="text"[(ngModel)]= "pass.firstnamePassenger"
+        name="firstnamePassenger" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+            <label >password</label>
+            <input type="password"[(ngModel)]= "pass.passwordPassenger"
+            name="passwordPassenger" class="form-control">
+            </div>
+            <button type="submit" (click)="onLoggedin()">Login</button>
+        </form>
+           
+             

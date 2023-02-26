@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="card shadow mb-4">
+    <div class="card-body">
+    <table class="table table-striped">
+    <tr> <th>Id</th><th> Name</th> <th>number</th> </tr>
+    <tbody *ngFor="let airline of airlines">
+        <tr >
+            <td>{{airline.idAirline}}</td>
+            <td>{{airline.nameAirline}}</td>
+            <td>{{airline.numberofPlanesAirline}}</td>
+            <td><a class="btn btn-success" [routerLink]="['/updateairline',airline.idAirline]" >Update</a></td>
+            <td><a class="btn btn-danger" (click)="deletea(airline.idAirline)">Delete</a></td>
+            </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+</div>

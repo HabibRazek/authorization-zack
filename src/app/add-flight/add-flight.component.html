@@ -1,0 +1,54 @@
+<div class="container">
+    <div>
+    <h2>Add Flight</h2>
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >ID </label>
+        <input type="text" [(ngModel)]="newFlight.idFlight"
+        name=" idFlight" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label >Code </label>
+            <input type="text" [(ngModel)]="newFlight.codeFlight"
+            name=" codeFlight" class="form-control">
+            </div>
+
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <label >depart </label>
+                <input type="text" [(ngModel)]="newFlight.departFlight"
+                name=" departFlight" class="form-control">
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-lg-2">
+                    <label >destination </label>
+                    <input type="text" [(ngModel)]="newFlight.destinationFlight"
+                    name="  destinationFlight" class="form-control">
+                    </div>
+
+
+                    <div class="col-sm-2 col-md-2 col-lg-2">
+                        <label >date </label>
+                        <input type="date" [(ngModel)]="newFlight.dateFlight"
+                        name="  dateFlight" class="form-control">
+                        </div>
+
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <label >number of seats </label>
+                            <input type="text" [(ngModel)]="newFlight.numberofseatsFlight"
+                            name="numberofseatsFlight" class="form-control">
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                <label>Airline</label>
+                                <select class="form-control form-control-lg" id="idAirline" name="idAirline" [(ngModel)]="newIdairline">
+                                 <option *ngFor="let air of airlines" [value]="air.idAirline" >
+                                 {{air.nameAirline}}
+                                </option>
+                                </select>
+                            </div>
+        
+        <div class="mt-2">
+        <button type="submit" (click)="addFlight()"class="btn btn-success">Add</button>
+        </div>
+        </form>
+        </div>

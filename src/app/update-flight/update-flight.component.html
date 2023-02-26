@@ -1,0 +1,56 @@
+<div class="container">
+    <div>
+    <h2>Update Flight</h2>
+    </div>
+    <form>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+        <label>ID </label>
+        <input type="text" [(ngModel)]="currentFlight.idFlight" name=" idFlight" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <label>codeFlight</label>
+        <input type="text" [(ngModel)]="currentFlight.codeFlight" name="codeFlight" class="form-control">
+    </div>
+
+
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <label>departFlight</label>
+        <input type="text" [(ngModel)]="currentFlight.departFlight" name="departFlight"
+            class="form-control">
+    </div>
+
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <label> destinationFlight</label>
+        <input type="text" [(ngModel)]="currentFlight.destinationFlight" name=" destinationFlight"
+            class="form-control">
+    </div>
+
+<div>
+    <label >Date Of flight </label>
+    <input type="date" [ngModel]="currentFlight.dateFlight | date: 'yyyy-MM-dd'"
+    (ngModelChange)=" currentFlight.dateFlight= $event" name="dateFlight"
+     class="form-control">
+    </div>
+    
+
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <label> numberofseatsFlight</label>
+        <input type="text" [(ngModel)]="currentFlight.numberofseatsFlight" name="numberofseatsFlight"
+            class="form-control">
+    </div>
+
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >Airline </label>
+    <select class="form-control form-control-lg" id="idAirline" name="idAirline"
+    [(ngModel)]="updatedAirId">
+    <option *ngFor="let air of airlines" [value]="air.idAirline" >
+    {{air.nameAirline}}
+    </option>
+    </select>
+
+        </div>
+        <div class="mt-2">
+        <button type="submit" (click)="updateFlight()"class="btn btn-success">Update</button>
+        </div>
+        </form>
+        </div>

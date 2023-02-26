@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="card shadow mb-4">
+    <div class="card-body">
+    <table class="table table-striped">
+    <tr> <th>Id</th><th> Code</th> <th>Type</th> <th>Amount</th> <th>status</th><th>code flight</th> <th>Passenger</th></tr>
+    <tbody *ngFor="let ticket of tickets">
+        <tr *ngIf="ticket.status=='booked'" > 
+            <td>{{ticket.idTicket}}</td>
+            <td>{{ticket.codeTicket}}</td>
+            <td>{{ticket.typeTicket}}</td>
+            <td>{{ticket.amountTicket}}</td>
+            <td>{{ticket.status}}</td>
+            <td>{{ticket.flight.codeFlight}}</td>
+            <td>{{ticket.passenger.firstnamePassenger}}</td>
+            <td><a class="btn btn-success" [routerLink]="['/updateticket',ticket.idTicket]">Update</a></td>
+            <td><a class="btn btn-danger" (click)="deletet(ticket.idTicket)" >Delete</a></td>
+            </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="card shadow mb-4">
+    <div class="card-body">
+    <table class="table table-striped">
+    <tr> <th>Id</th><th>First Name</th> <th>Last Name</th> <th>CIN</th><th>Passport</th> <th>Address</th><th>Nationality</th>
+        <th>Gender</th>   <th>Phone</th>  </tr>
+    <tbody *ngFor="let passenger of passengers">
+        <tr >
+            <td>{{passenger.idPassenger}}</td>
+            <td>{{passenger.firstnamePassenger}}</td>
+            <td>{{passenger.lastnamePassenger}}</td>
+            <td>{{passenger.cinPassenger}}</td>
+            <td>{{passenger.passportPassenger}}</td>
+            <td>{{passenger.adressPassenger}}</td>
+            <td>{{passenger.nationalityPassenger}}</td>
+            <td>{{passenger.genderPassenger}}</td>
+            <td>{{passenger.phonePassenger}}</td>
+            <td><a class="btn btn-success" [routerLink]="['/updatepassenger',passenger.idPassenger]">Update</a></td>
+            <td><a class="btn btn-danger" (click)="deletep(passenger.idPassenger)">Delete</a></td>
+            </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="container">
+    <div>
+    <h2>Verify Your Information</h2>
+    </div>
+    <form >
+     
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >First Name</label>
+        <input type="text"[(ngModel)]= "currentPassenger.firstnamePassenger" value="{{currentPassenger.firstnamePassenger}}"
+        name="firstnamePassenger" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+            <label >Last Name</label>
+            <input type="text"[(ngModel)]= "currentPassenger.lastnamePassenger" 
+            name="lastnamePassenger" class="form-control">
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4" >
+                <label >CIN</label>
+                <input type="text"[(ngModel)]= "currentPassenger.cinPassenger"
+                name="cinPassenger" class="form-control">
+                </div>
+
+                <div class="col-sm-4 col-md-4 col-lg-4" >
+                    <label >Passport</label>
+                    <input type="text"[(ngModel)]= "currentPassenger.passportPassenger"
+                    name="passportPassenger" class="form-control">
+                    </div>
+                
+                    <div class="col-sm-4 col-md-4 col-lg-4" >
+                        <label >Adress</label>
+                        <input type="text"[(ngModel)]= "currentPassenger.adressPassenger"
+                        name="adressPassenger" class="form-control">
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4" >
+                            <label >Nationality</label>
+                            <input type="text"[(ngModel)]= "currentPassenger.nationalityPassenger"
+                            name="nationalityPassenger" class="form-control">
+                            </div>
+
+                            <div class="col-sm-4 col-md-4 col-lg-4" >
+                                <label >Gender</label>
+                                <input type="text"[(ngModel)]= "currentPassenger.genderPassenger"
+                                name="genderPassenger" class="form-control">
+                                </div>
+                                <div class="col-sm-4 col-md-4 col-lg-4" >
+                                    <label >Phone</label>
+                                    <input type="text"[(ngModel)]= "currentPassenger.phonePassenger"
+                                    name="phonePassenger" class="form-control">
+                                    </div>
+        <div class="mt-2">
+        <button type="submit" class="btn btn-success" (click)="updatePassenger()" >Update</button>
+        </div>
+        </form>
+        </div>

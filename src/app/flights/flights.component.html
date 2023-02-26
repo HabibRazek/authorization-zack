@@ -1,0 +1,25 @@
+<div class="container">
+        
+    <div class="card shadow mb-4">
+    <div class="card-body">
+    <table class="table table-striped">
+    <tr> <th>Id</th><th> Code</th> <th>Depart</th> <th>Destination</th> <th>Date</th><th>number of seats</th> <th>airline</th></tr>
+    <tbody *ngFor="let flight of flights">
+        <tr >
+            <td>{{flight.idFlight}}</td>
+            <td>{{flight.codeFlight}}</td>
+            <td>{{flight.departFlight}}</td>
+            <td>{{flight.destinationFlight}}</td>
+            <td>{{flight.dateFlight  | date:'dd/MM/yyyy'}}</td>
+            <td>{{flight.numberofseatsFlight}}</td>
+            <td>{{flight.airline.nameAirline}}</td>
+            
+            <td><a class="btn btn-success" [routerLink]="['/updateflight',flight.idFlight]" >Update</a></td>
+            <td><a class="btn btn-danger" (click)="deletef(flight.idFlight)">Delete</a></td>
+            <td><a class="btn btn-dark"[routerLink]="['/ticketavailable',flight.idFlight]">choose</a></td>
+            </tr>
+    </tbody>
+    </table>
+    </div>
+    </div> 
+</div>

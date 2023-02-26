@@ -1,0 +1,64 @@
+<div class="container">
+    <div>
+    <h2>Update ticket</h2>
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >ID </label>
+        <input type="text" [(ngModel)]="currentTicket.idTicket"
+        name="idTicket" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label >Code </label>
+            <input type="text" [(ngModel)]="currentTicket.codeTicket"
+            name=" codeTicket" class="form-control">
+            </div>
+
+
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <label >Type </label>
+                <input type="text" [(ngModel)]="currentTicket.typeTicket"
+                name=" typeTicket" class="form-control">
+                </div>
+            
+
+                <div class="col-sm-2 col-md-2 col-lg-2">
+                    <label >amount </label>
+                    <input type="text" [(ngModel)]="currentTicket.amountTicket"
+                    name=" amountTicket" class="form-control">
+                    </div>
+
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                <label >passenger </label>
+                            <select class="form-control form-control-lg" id="idPassenger" name="idPassenger"
+                            [(ngModel)]="updatedPassId">
+                            <option *ngFor="let pass of passengers" [value]="pass.idPassenger" >
+                            {{pass.firstnamePassenger}}
+                            </option>
+                            </select>
+
+
+</div>
+
+<div class="col-sm-4 col-md-4 col-lg-4">
+    <label>flight </label>
+    <select class="form-control form-control-lg" id="idFlight" name="idFlight" [(ngModel)]="updatedFlyId">
+        <option *ngFor="let fly of flights" [value]="fly.idFlight">
+            {{fly.codeFlight}}
+        </option>
+    </select>
+</div>
+
+
+
+
+
+
+
+
+        
+        <div class="mt-2">
+        <button type="submit" (click)="updateTicket()"class="btn btn-success">Update</button>
+        </div>
+        </form>
+        </div>

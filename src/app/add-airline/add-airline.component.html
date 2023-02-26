@@ -1,0 +1,25 @@
+<div class="container">
+    <div>
+    <h2>Add Airline</h2>
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >ID </label>
+        <input type="text" [(ngModel)]="newAirline.idAirline"
+        name=" idAirline" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >Name</label>
+        <input type="text"[(ngModel)]= "newAirline.nameAirline"
+        name="nameAirline" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+            <label >Number of Planes</label>
+            <input type="text"[(ngModel)]= "newAirline.numberofPlanesAirline"
+            name="numberofPlanesAirline" class="form-control">
+            </div>
+        <div class="mt-2">
+        <button type="submit" (click)="AddAirline()"class="btn btn-success">Add</button>
+        </div>
+        </form>
+        </div>

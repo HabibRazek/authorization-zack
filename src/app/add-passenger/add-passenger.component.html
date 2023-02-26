@@ -1,0 +1,58 @@
+<div class="container">
+    <div>
+    <h2>Add Passenger</h2>
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >ID Passenger</label>
+        <input type="text" [(ngModel)]="newPassenger.idPassenger"
+        name=" idPassenger" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >firstnamePassenger</label>
+        <input type="text"[(ngModel)]= "newPassenger.firstnamePassenger"
+        name="firstnamePassenger" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+            <label >lastnamePassenger</label>
+            <input type="text"[(ngModel)]= "newPassenger.lastnamePassenger"
+            name="lastnamePassenger" class="form-control">
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4" >
+                <label >cinPassenger</label>
+                <input type="text"[(ngModel)]= "newPassenger.cinPassenger"
+                name="cinPassenger" class="form-control">
+                </div>
+
+                <div class="col-sm-4 col-md-4 col-lg-4" >
+                    <label >passportPassenger</label>
+                    <input type="text"[(ngModel)]= "newPassenger.passportPassenger"
+                    name="passportPassenger" class="form-control">
+                    </div>
+                
+                    <div class="col-sm-4 col-md-4 col-lg-4" >
+                        <label >adressPassenger</label>
+                        <input type="text"[(ngModel)]= "newPassenger.adressPassenger"
+                        name="adressPassenger" class="form-control">
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4" >
+                            <label >nationalityPassenger</label>
+                            <input type="text"[(ngModel)]= "newPassenger.nationalityPassenger"
+                            name="nationalityPassenger" class="form-control">
+                            </div>
+
+                            <div class="col-sm-4 col-md-4 col-lg-4" >
+                                <label >genderPassenger</label>
+                                <input type="text"[(ngModel)]= "newPassenger.genderPassenger"
+                                name="genderPassenger" class="form-control">
+                                </div>
+                                <div class="col-sm-4 col-md-4 col-lg-4" >
+                                    <label >phonePassenger</label>
+                                    <input type="text"[(ngModel)]= "newPassenger.phonePassenger"
+                                    name="phonePassenger" class="form-control">
+                                    </div>
+        <div class="mt-2">
+        <button type="submit" (click)="AddPassenger()"class="btn btn-success">Add</button>
+        </div>
+        </form>
+        </div>

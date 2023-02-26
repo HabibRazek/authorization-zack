@@ -1,0 +1,50 @@
+<div class="container">
+    <div>
+    <h2>Fill this form to book your ticket </h2>
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label >Code </label>
+            <input type="text" [(ngModel)]="newTicket.codeTicket"
+            name=" codeTicket" class="form-control">
+            </div>
+
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <label >Type </label>
+                <input type="text" [(ngModel)]="newTicket.typeTicket"
+                name=" typeTicket" class="form-control">
+                </div>
+            
+
+                <div class="col-sm-2 col-md-2 col-lg-2">
+                    <label >amount </label>
+                    <input type="text" [(ngModel)]="newTicket.amountTicket"
+                    name=" amountTicket" class="form-control">
+                    </div>
+           
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <label >passenger </label>
+                    <select class="form-control form-control-lg" id="idPassenger" name="idPassenger"
+                    [(ngModel)]="updatedPassId">
+                    <option *ngFor="let pass of passengers" [value]="pass.idPassenger" >
+                    {{pass.firstnamePassenger}}
+                    </option>
+                    </select>
+
+
+</div>
+
+<div class="col-sm-4 col-md-4 col-lg-4">
+<label>flight </label>
+<select class="form-control form-control-lg" id="idFlight" name="idFlight" [(ngModel)]="updatedFlyId">
+<option *ngFor="let fly of flights" [value]="fly.idFlight">
+    {{fly.codeFlight}}
+</option>
+</select>
+</div>
+
+        <div class="mt-2">
+        <button type="submit" (click)="AddTicket()"class="btn btn-success">Book</button>
+        </div>
+        </form>
+        </div>
